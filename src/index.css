@@ -1,4 +1,10 @@
 @import "tailwindcss";
+
+:root{
+    --green: #019359;
+    --yellow: #FFB52D;
+    --text: #727377;
+}
 button{
     cursor: pointer;
 }

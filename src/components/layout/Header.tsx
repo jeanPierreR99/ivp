@@ -23,7 +23,7 @@ const Header = () => {
 
     return (
         <header className="fixed top-0 left-0 w-full h-[80px] bg-white shadow-md z-50">
-            <div className="max-w-[1225px] mx-auto px-4 sm:px-6 lg:px-8 h-[80px] flex items-center justify-between">
+            <div className="max-w-[1425px] mx-auto px-4 md:px-0 h-[80px] flex items-center justify-between">
                 {/* Logo */}
                 <div className="h-full py-2 w-[140px]">
                     <img src="./logo.png" className="h-full w-full object-contain" alt="Logo" />

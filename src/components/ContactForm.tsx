@@ -1,19 +1,32 @@
+import { motion } from 'framer-motion';
 
 const ContactForm = () => {
     return (
         <section id="contact" className="bg-gray-50 mt-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                 {/* Imagen izquierda */}
-                <div className="hidden md:block">
+                <motion.div
+                    className="hidden md:block"
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.7 }}
+                    viewport={{ once: true }}
+                >
                     <img
-                        src="https://i.pinimg.com/736x/37/62/2d/37622d871ef75d1a37b64ab0f48a0183.jpg"
+                        src="Recurso 1con lineas.png"
                         alt="Persona contactando"
                         className="w-full h-auto object-fill max-h-[700px]"
                     />
-                </div>
+                </motion.div>
 
                 {/* Formulario */}
-                <div className=" p-8  w-full">
+                <motion.div
+                    className="p-8 w-full"
+                    initial={{ opacity: 0, x: 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.7, delay: 0.2 }}
+                    viewport={{ once: true }}
+                >
                     <h2 className="text-3xl font-bold text-yellow-400 mb-6">Contáctanos</h2>
                     <form className="space-y-5">
                         <div>
@@ -58,14 +71,16 @@ const ContactForm = () => {
                             ></textarea>
                         </div>
 
-                        <button
+                        <motion.button
                             type="submit"
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.97 }}
                             className="w-full bg-yellow-400 text-white py-2 rounded-md font-medium hover:bg-yellow-500 transition duration-300"
                         >
                             Enviar mensaje
-                        </button>
+                        </motion.button>
                     </form>
-                </div>
+                </motion.div>
             </div>
         </section>
     );
